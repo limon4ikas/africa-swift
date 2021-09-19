@@ -10,7 +10,7 @@ import SwiftUI
 struct AnimalDetailView: View {
     // MARK: - PROPERTIES
 
-    let animal: Animal
+    let animal: AnimalModel
     
     // MARK: - BODY
 
@@ -90,7 +90,7 @@ struct AnimalDetailView: View {
 // MARK: - PREVIEW
 
 struct AnimalDetailView_Previews: PreviewProvider {
-    static let animals: [Animal] = Bundle.main.decode("animals.json")
+    static let animals: [AnimalModel] = Bundle.main.decode("animals.json")
     
     static var previews: some View {
         NavigationView {

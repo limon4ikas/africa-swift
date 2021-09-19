@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     // MARK: - PROPERTIES
     
-    let animals: [Animal] = Bundle.main.decode("animals.json")
+    let animals: [AnimalModel] = Bundle.main.decode("animals.json")
 
     // MARK: - BODY
 
@@ -26,7 +26,7 @@ struct ContentView: View {
                         destination: AnimalDetailView(animal: animal)) {
                         AnimalListItemView(animal: animal)
                     }
-                }
+                } //: LOOP
             } //: LIST
             .navigationBarTitle("Africa", displayMode: .large)
         } //: NAVIGATION

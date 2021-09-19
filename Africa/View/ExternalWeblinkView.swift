@@ -10,7 +10,7 @@ import SwiftUI
 struct ExternalWeblinkView: View {
     // MARK: - PROPERTIES
 
-    let animal: Animal
+    let animal: AnimalModel
 
     // MARK: - BODY
 
@@ -19,13 +19,14 @@ struct ExternalWeblinkView: View {
             HStack {
                 Image(systemName: "globe")
                 Text("Wikipedia")
+                
                 Spacer()
 
                 Group {
                     Image(systemName: "arrow.up.right.square")
 
                     Link(animal.name, destination: URL(string: animal.link) ?? URL(string: "https://wikipedia.org")!)
-                }
+                } //: GROUP
                 .foregroundColor(.accentColor)
             }
         } //: GROUPBOX
@@ -35,7 +36,7 @@ struct ExternalWeblinkView: View {
 // MARK: - PREVIEW
 
 struct ExternalWeblinkView_Previews: PreviewProvider {
-    static let animals: [Animal] = Bundle.main.decode("animals.json")
+    static let animals: [AnimalModel] = Bundle.main.decode("animals.json")
 
     static var previews: some View {
         ExternalWeblinkView(animal: animals[0])

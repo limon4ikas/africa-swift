@@ -10,7 +10,7 @@ import SwiftUI
 struct InsetGalleryView: View {
     // MARK: - PROPERTIES
 
-    let animal: Animal
+    let animal: AnimalModel
 
     // MARK: - BODY
 
@@ -32,7 +32,7 @@ struct InsetGalleryView: View {
 // MARK: - PREVIEW
 
 struct InsetGalleryView_Previews: PreviewProvider {
-    static let animals: [Animal] = Bundle.main.decode("animals.json")
+    static let animals: [AnimalModel] = Bundle.main.decode("animals.json")
 
     static var previews: some View {
         InsetGalleryView(animal: animals[0])
