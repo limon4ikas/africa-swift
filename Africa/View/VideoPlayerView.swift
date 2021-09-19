@@ -18,14 +18,13 @@ struct VideoPlayerView: View {
 
     var body: some View {
         VStack {
-            VideoPlayer(player: playVideo(fileName: videoSelected, fileFormat: "mp4")) {
-            } //: VIDEOPLAYER
-            .overlay(
-                Image("logo")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 32, height: 32).padding(.top, 6).padding(.horizontal, 8), alignment: .topLeading
-            )
+            VideoPlayer(player: playVideo(fileName: videoSelected, fileFormat: "mp4")) {} //: VIDEOPLAYER
+                .overlay(
+                    Image("logo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 32, height: 32).padding(.top, 6).padding(.horizontal, 8), alignment: .topLeading
+                )
         } //: VSTACK
         .accentColor(.accentColor)
         .navigationBarTitle(videoTitle, displayMode: .inline)
