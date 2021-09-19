@@ -13,6 +13,6 @@ struct VideoModel: Codable, Identifiable {
     let headline: String
     
     var thumbnail: String {
-        return "video-\(id)"
+        "video-\(id)"
     }
 }

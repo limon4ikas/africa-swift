@@ -50,7 +50,7 @@ struct VideoListItem_Previews: PreviewProvider {
     static let videos: [VideoModel] = Bundle.main.decode("videos.json")
     
     static var previews: some View {
-        VideoListItem(video: videos[0])
+        VideoListItem(video: videos[2])
             .previewLayout(.sizeThatFits)
             .padding()
     }
